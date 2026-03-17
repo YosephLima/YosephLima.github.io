@@ -13,7 +13,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- My CSS -->
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -51,336 +51,74 @@
 
         <section id="formacao" class="mb-10">
             <h2 class="section-title text-center text-2xl font-bold">Formação</h2>
-            <div class="space-y-4">
-                <div class="w-full">
-                    <div class="card p-4">
-                        <h5 class="text-xl font-semibold mb-2"><i class="bi bi-mortarboard-fill text-primary"></i>
-                            Desenvolvimento de Software Multiplataforma <span class="text-green-500"><span
-                                    class="status-dot"></span><span class="text-[1.05rem]">Cursando</span></span></h5>
-                        <p class="m-0">FATEC Prof. Jessen Vidal - São José dos Campos | 2025 - 2028</p>
-                    </div>
-                </div>
-                <div class="w-full">
-                    <div class="card p-4">
-                        <h5 class="text-xl font-semibold mb-2"><i class="bi bi-mortarboard-fill text-primary"></i>
-                            Técnico em Desenvolvimento de Sistemas</h5>
-                        <p class="m-0">SENAI Félix Guisard - Taubaté | 2021 - 2023</p>
-                    </div>
-                </div>
-            </div>
+            <div class="space-y-4" id="formacao-container"></div>
         </section>
 
         <section id="experiencia" class="mb-10">
             <h2 class="section-title text-center text-2xl font-bold">Experiência Profissional</h2>
-            <div class="space-y-4">
-                <div class="w-full">
-                    <div class="card p-4">
-                        <h5 class="text-xl font-semibold mb-2">Desenvolvedor Júnior - Isolar Energy <span
-                                class="text-green-500"><span class="status-dot"></span><span
-                                    class="text-[1.05rem]">Atual</span></span></h5>
-                        <p class="text-sm mb-2">Ago 2025 - Presente</p>
-                        <p class="m-0 mb-2">Implementações de novas funcionalidades, refatorações, conexões com API's
-                            externas e planilhas de cálculo transformadas em código.</p>
-                        <p class="mb-0"><strong>Tecnologias:</strong> React, TypeScript, PHP, MySQL, Docker, API's
-                            RESTful</p>
-                    </div>
-                </div>
-                <div class="w-full">
-                    <div class="card p-4">
-                        <h5 class="text-xl font-semibold mb-2">Estagiário de Desenvolvimento - Isolar Energy</h5>
-                        <p class="text-sm mb-2">Set 2024 - Jul 2025</p>
-                        <p class="m-0 mb-2">Alterações em sistemas legados e desenvolvimento de novas funcionalidades
-                            simples. <br /><strong>Tecnologias:</strong> React, TypeScript, PHP, MySQL</p>
-                        <hr class="my-4 border-gray-600" />
-                        <h5 class="text-xl font-semibold mb-2">Auxiliar de Engenharia/Topografia - Isolar Energy</h5>
-                        <p class="text-sm mb-2">Jun 2024 - Jun 2025</p>
-                        <p class="m-0 mb-2">Atividades de topografia (em campo e escritório) e suporte à equipe de
-                            engenharia.</p>
-                        <p class="mb-0"><strong>Tecnologias:</strong> Excel, Agisoft Metashape, Google Earth Pro,
-                            Aparelhos RTK (GNSS)</p>
-                    </div>
-                </div>
-            </div>
+            <div id="experiencia-container" class="space-y-4"></div>
         </section>
 
         <section id="habilidades" class="mb-10">
-            <h2 class="section-title text-center text-2xl font-bold">Habilidades Técnicas</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card p-6 h-100">
-                        <h5 class="text-center text-xl font-semibold mb-4"><i class="bi bi-code-slash"></i> Front-end
+            <div class="d-flex justify-content-center items-center gap-3 mb-3">
+                <h2 class="section-title text-center text-2xl font-bold mb-0">Habilidades Técnicas</h2>
+                <button id="habilidades-editar-btn" type="button" class="btn btn-primary habilidades-edit-btn" title="Modo edição" aria-label="Abrir modo edição de habilidades">
+                    <i class="bi bi-plus-lg"></i>
+                </button>
+            </div>
+            
+            <div class="row g-4" id="habilidades-container">
+                </div>
+        </section>
+
+        <div class="modal fade" id="habilidade-modal" tabindex="-1" aria-labelledby="habilidade-modal-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content habilidade-modal-content">
+                    <div class="modal-header border-bottom">
+                        <h5 class="modal-title" id="habilidade-modal-label">
+                            <i class="bi bi-plus-circle me-2"></i>Adicionar habilidade
                         </h5>
-                        <div class="grid grid-cols-3 gap-3">
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                                    alt="HTML" class="tech-icon">
-                                <span class="tech-name">HTML</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                    alt="CSS" class="tech-icon">
-                                <span class="tech-name">CSS</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                                    alt="JavaScript" class="tech-icon">
-                                <span class="tech-name">JavaScript</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="./img/tecs/ts.png" alt="TypeScript" class="tech-icon">
-                                <span class="tech-name">TypeScript</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="./img/tecs/react.png" alt="React.js" class="tech-icon">
-                                <span class="tech-name">React.js</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="./img/tecs/vite.png" alt="Vite.js" class="tech-icon">
-                                <span class="tech-name">Vite.js</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                                    alt="Bootstrap" class="tech-icon">
-                                <span class="tech-name">Bootstrap</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-                                    alt="Tailwind" class="tech-icon">
-                                <span class="tech-name">Tailwind</span>
-                            </div>
-                        </div>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-6 h-100">
-                        <h5 class="text-center text-xl font-semibold mb-4"><i class="bi bi-server"></i> Back-end</h5>
-                        <div class="grid grid-cols-3 gap-3">
-                            <div class="tech-card">
-                                <img src="./img/tecs/php.png" alt="PHP">
-                                <!-- <span class="tech-name">PHP</span> -->
+                    <div class="modal-body">
+                        <form id="habilidade-form" novalidate>
+                            <div class="mb-3">
+                                <label for="habilidade-categoria" class="form-label">Categoria</label>
+                                <select id="habilidade-categoria" class="form-select">
+                                    <option value="">Selecione uma categoria</option>
+                                    <option value="front-end">Front-end</option>
+                                    <option value="back-end">Back-end</option>
+                                    <option value="ferramentas">Ferramentas</option>
+                                </select>
                             </div>
-                            <div class="tech-card">
-                                <img src="./img/tecs/c.png" alt="C">
-                                <!-- <span class="tech-name">C</span> -->
+                            <div class="mb-3">
+                                <label for="habilidade-nome" class="form-label">Nome da habilidade</label>
+                                <input id="habilidade-nome" type="text" class="form-control" placeholder="Ex: Node.js">
                             </div>
-                            <div class="tech-card">
-                                <img src="./img/tecs/python.png" alt="Python" class="tech-icon">
-                                <span class="tech-name">Python</span>
+                            <div class="mb-3">
+                                <label for="habilidade-img" class="form-label">Link da imagem</label>
+                                <input id="habilidade-img" type="text" class="form-control" placeholder="Ex: ./img/tecs/node.png ou https://...">
                             </div>
-                            <div class="tech-card">
-                                <img src="./img/tecs/flask.png" alt="Flask" class="tech-icon">
-                                <span class="tech-name">Flask</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg"
-                                    alt="REST API" class="tech-icon">
-                                <span class="tech-name">REST APIs</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="./img/tecs/mysql.png" alt="MySQL">
-                                <!-- <span class="tech-name">MySQL</span> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card p-6 h-100">
-                        <h5 class="text-center text-xl font-semibold mb-4"><i class="bi bi-tools"></i> Ferramentas</h5>
-                        <div class="grid grid-cols-3 gap-3">
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                                    alt="Git" class="tech-icon">
-                                <span class="tech-name">Git</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                                    alt="GitHub" class="tech-icon">
-                                <span class="tech-name">GitHub</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="./img/tecs/docker.png" alt="Docker" class="tech-icon">
-                                <span class="tech-name">Docker</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="./img/tecs/aws.png" alt="AWS">
-                                <!-- <span class="tech-name">AWS</span> -->
-                            </div>
-                            <div class="tech-card">
-                                <img src="./img/tecs/xampp.png" alt="XAMPP" class="tech-icon">
-                                <span class="tech-name">XAMPP</span>
-                            </div>
-                            <div class="tech-card">
-                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                                    alt="VS Code" class="tech-icon">
-                                <span class="tech-name">VS Code</span>
-                            </div>
-                        </div>
+                            <button type="submit" class="btn btn-primary w-100">Adicionar habilidade</button>
+                        </form>
+                        <div id="habilidade-feedback" class="mt-3"></div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <section id="projetos" class="mb-10">
             <h2 class="section-title text-center text-2xl font-bold">Projetos</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="text-xl font-semibold mb-3 text-center"> My Personal Accounting <span
-                                    class="text-yellow-500"><span class="status-dot status-dot-yellow"></span><span
-                                        class="text-[1.05rem]">Em Desenvolvimento</span></span></h5>
-                            <div class="flex items-center justify-center mb-4 bg-gray-300 h-64 rounded-md p-8">
-                                <img src="./img/contabilidade.png" alt="My Personal Accounting"
-                                    class="max-h-full max-w-full object-contain mx-auto">
-                            </div>
-                            <p class="mb-3">Aplicação completa para gestão de finanças pessoais, com controle de
-                                despesas e receitas. Sendo um projeto pessoal, <b>sou o único Desenvovedor
-                                    (Full-Stack)</b>, criando o layout, modelando o banco de dados e estruturando o
-                                Front e Back-End. Atualmente será de uso interno, mas planejo moldá-lo para um projeto
-                                público.</p>
-                            <p class="mb-2 font-semibold text-center">Tecnologias:</p>
-                            <div class="flex flex-wrap gap-2 mb-4 items-center justify-center">
-                                <div class="project-tech-icon" title="React.js">
-                                    <img src="./img/tecs/react.png" alt="React.js">
-                                </div>
-                                <div class="project-tech-icon" title="Vite.js">
-                                    <img src="./img/tecs/vite.png" alt="Vite.js">
-                                </div>
-                                <div class="project-tech-icon" title="TypeScript">
-                                    <img src="./img/tecs/ts.png" alt="TypeScript">
-                                </div>
-                                <div class="project-tech-icon" title="PHP">
-                                    <img src="./img/tecs/php.png" alt="PHP">
-                                </div>
-                                <div class="project-tech-icon" title="MySQL">
-                                    <img src="./img/tecs/mysql.png" alt="MySQL">
-                                </div>
-                                <div class="project-tech-icon" title="Docker">
-                                    <img src="./img/tecs/docker.png" alt="Docker">
-                                </div>
-                            </div>
-                            <div class="text-center mt-3">
-                                <a style="text-decoration: none;"
-                                    class="cursor-pointer inline-block px-8 py-2.5 bg-blue-500 hover:bg-blue-400 text-white rounded-lg font-semibold border-2 border-blue-400 shadow-md hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">Acessar</a>
-                            </div>
-                        </div>
-                    </div>
+            
+            <div class="row g-4" id="projetos-container">
                 </div>
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="text-xl font-semibold mb-3 text-center">Planeja SJC <span
-                                    class="text-yellow-500"><span class="status-dot status-dot-yellow"></span><span
-                                        class="text-[1.05rem]">Em
-                                        Desenvolvimento</span></span></h5>
-                            <img src="./img/PlanejaSJC.png" alt="Planeja SJC"
-                                class="w-full h-64 object-cover rounded mb-4">
-                            <p class="mb-3">Plataforma de Gráficos interativos sobre os dados do Censo 2022 do município
-                                de
-                                São José dos Campos. Desenvolvido como Projeto Integrador na FATEC SJC, <b>tive minha
-                                    participação como Product Owner & Back-End Developer</b>, responsável por,
-                                principalmente,
-                                estruturar a disposição dos gráficos.</p>
-                            <p class="mb-2 font-semibold text-center">Tecnologias:</p>
-                            <div class="flex flex-wrap gap-2 mb-4 items-center justify-center">
-                                <div class="project-tech-icon" title="HTML">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                                        alt="HTML">
-                                </div>
-                                <div class="project-tech-icon" title="CSS">
-                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                        alt="CSS">
-                                </div>
-                                <div class="project-tech-icon" title="MySQL">
-                                    <img src="./img/tecs/mysql.png" alt="MySQL">
-                                </div>
-                                <div class="project-tech-icon" title="AWS">
-                                    <img src="./img/tecs/aws.png" alt="AWS">
-                                </div>
-                                <div class="project-tech-icon" title="Python">
-                                    <img src="./img/tecs/python.png" alt="Python">
-                                </div>
-                                <div class="project-tech-icon" title="Flask">
-                                    <img src="./img/tecs/flask.png" alt="Flask">
-                                </div>
-                            </div>
-                            <div class="text-center mt-3">
-                                <a href="https://github.com/OmniDevsOficial/API-Censo-2022" target="_blank"
-                                    style="text-decoration: none;"
-                                    class="inline-block px-8 py-2.5 bg-blue-500 hover:bg-blue-400 text-white rounded-lg font-semibold border-2 border-blue-400 shadow-md hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300">Acessar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <section id="certificacoes" class="mb-10">
             <h2 class="section-title text-center text-2xl font-bold">Certificações</h2>
-            <div class="row g-3">
-                <div class="col-md-6">
-                    <div class="card p-4">
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <h6 class="text-lg font-semibold mb-2"><i class="bi bi-award-fill text-warning"></i>
-                                    Técnico em
-                                    Desenvolvimento de Sistemas</h6>
-                                <p class="m-0">SENAI Taubaté - 2023</p>
-                            </div>
-                            <a class="cert-pdf-btn cursor-pointer" title="Ver PDF">
-                                <i class="bi bi-filetype-pdf"></i>
-                            </a>
-                        </div>
-                    </div>
+            
+            <div class="row g-3" id="certificacoes-container">
                 </div>
-                <div class="col-md-6">
-                    <div class="card p-4">
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <h6 class="text-lg font-semibold mb-2"><i class="bi bi-award-fill text-warning"></i>
-                                    Programação
-                                    de Robôs Industriais</h6>
-                                <p class="m-0">SENAI Taubaté - 2023</p>
-                            </div>
-                            <a class="cert-pdf-btn cursor-pointer" title="Ver PDF">
-                                <i class="bi bi-filetype-pdf"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card p-4">
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <h6 class="text-lg font-semibold mb-2"><i class="bi bi-award-fill text-warning"></i> AWS
-                                    Academy Cloud Foundations</h6>
-                                <p class="m-0">Amazon Web Services - 2022</p>
-                            </div>
-                            <a href="https://www.credly.com/badges/00fa832f-d2fc-415b-8ede-0e2e63e1f115/print"
-                                class="!bg-blue-600 cert-pdf-btn" title="Acessar Certificado" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="bi bi-eye"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card p-4">
-                        <div class="flex justify-between items-center">
-                            <div>
-                                <h6 class="text-lg font-semibold mb-2"><i class="bi bi-award-fill text-warning"></i>
-                                    Escola de Inovadores</h6>
-                                <p class="m-0">INOVA CPS - 2025</p>
-                            </div>
-                            <a href="https://drive.google.com/file/d/1tV3KV7SpCNKKyRnOwVJj_p8aiaM-UUPr"
-                                class="cert-pdf-btn cursor-pointer" title="Ver PDF" target="_blank"
-                                rel="noopener noreferrer">
-                                <i class="bi bi-filetype-pdf"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
 
         <section id="contato" class="mb-10">
@@ -413,11 +151,12 @@
     <footer class="text-center py-6 border-t"
         style="background: linear-gradient(90deg, #0d2137 0%, #1a3a5c 100%); border-color: #2e5a8f !important;">
         <div class="container mx-auto px-4">
-            <p class="m-0">© 2025 Yoseph Levi - Desenvolvedor de Software</p>
+            <p class="m-0">© 2026 Yoseph Levi - Desenvolvedor de Software</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
