@@ -15,8 +15,8 @@ app.use("/apresentacao", apresentacaoRoutes);
 app.use("/certificacoes", certificacaoRoutes);
 app.use("/experiencias", experienciaRoutes);
 app.use("/formacoes", formacaoRoutes);
-app.use("/formas-contato", formaContatoRoutes);
-app.use("/habilidades-tecnicas", habilidadeTecnicaRoutes);
+app.use("/contatos", formaContatoRoutes);
+app.use("/habilidades", habilidadeTecnicaRoutes);
 app.use("/projetos", projetoRoutes);
 
 app.get("/", (req, res) => {

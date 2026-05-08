@@ -1,0 +1,12 @@
+{
+  "name": "portfolio",
+  "lockfileVersion": 3,
+  "requires": true,
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "shared"
+  ],
+  "packages": {}
+}
